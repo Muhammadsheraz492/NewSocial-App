@@ -1,11 +1,15 @@
 import React from 'react';
+import {Text} from 'react-native-animatable';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import OnboardingScreen from '../Screens/Onboarding';
 import Login from '../Screens/Login';
-// import AsyncStorage from '@react-native-community/async-storage';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
+
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Startuplogo from '../Screens/Startuplogo';
 import Signup from '../Screens/Sign up';
+
+import {View} from 'react-native-animatable';
 const Stack = createNativeStackNavigator();
 const AppStack = () => {
   const [isFirstlunch, setIsFirstlunch] = React.useState(null);
@@ -48,7 +52,26 @@ const AppStack = () => {
       <Stack.Screen
         name="Signup"
         component={Signup}
-        options={{headerShown: false}}
+        options={({navigation}) => ({
+          // headerShown: false,
+          title: ' ',
+          headerStyle: {
+            backgroundColor: '#f9fafd',
+            shadowColor: '#f9fafd',
+            elevation: 0,
+          },
+          headerLeft: () => (
+            <View>
+              <FontAwesome.Button
+                name="long-arrow-left"
+                size={20}
+                backgroundColor="#f9fafd"
+                color="#333"
+                onPress={() => navigation.navigate('Login')}
+              />
+            </View>
+          ),
+        })}
       />
     </Stack.Navigator>
   );
