@@ -7,7 +7,7 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import FormsButton from '../Components/Formsbtn';
 import FormsInput from '../Components/FormsInput';
 import SocialButton from '../Components/SocialButton';
-const Login = ({navigation}) => {
+const Signup = () => {
   const [Email, setEmail] = useState();
   // const [Email, setEmail] = useState();
   const [Password, setPassword] = useState();
@@ -64,7 +64,7 @@ const Login = ({navigation}) => {
         <View style={{width: '90%', alignSelf: 'center'}}>
           <SocialButton
             btnType="facebook"
-            buttonTitle=" Sign in with FaceBook"
+            buttonTitle="FaceBook"
             color={'#4867aa'}
             backgroundColor={'#e6eaf4'}
           />
@@ -73,7 +73,7 @@ const Login = ({navigation}) => {
         <View style={{alignItems: 'center', width: '90%', alignSelf: 'center'}}>
           <SocialButton
             btnType="google"
-            buttonTitle=" Sign in with Google"
+            buttonTitle="Google"
             color={'#de4d41'}
             backgroundColor="#f5e7ea"
           />
@@ -90,7 +90,7 @@ const Login = ({navigation}) => {
             justifyContent: 'center',
           }}>
           <Text>Don't have an account ?</Text>
-          <Pressable onPress={() => navigation.navigate('Signup')}>
+          <Pressable onPress={() => alert('dcb')}>
             <Text style={{fontSize: 18}}> create here</Text>
           </Pressable>
         </View>
@@ -99,4 +99,4 @@ const Login = ({navigation}) => {
   );
 };
 
-export default Login;
+export default Signup;

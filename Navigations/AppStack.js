@@ -5,6 +5,7 @@ import Login from '../Screens/Login';
 // import AsyncStorage from '@react-native-community/async-storage';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Startuplogo from '../Screens/Startuplogo';
+import Signup from '../Screens/Sign up';
 const Stack = createNativeStackNavigator();
 const AppStack = () => {
   const [isFirstlunch, setIsFirstlunch] = React.useState(null);
@@ -42,6 +43,11 @@ const AppStack = () => {
       <Stack.Screen
         name="Login"
         component={Login}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Signup"
+        component={Signup}
         options={{headerShown: false}}
       />
     </Stack.Navigator>
