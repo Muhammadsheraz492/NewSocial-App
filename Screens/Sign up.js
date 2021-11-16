@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import {View, Text, Pressable} from 'react-native';
 import * as Animatable from 'react-native-animatable';
 import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
@@ -7,7 +7,9 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import FormsButton from '../Components/Formsbtn';
 import FormsInput from '../Components/FormsInput';
 import SocialButton from '../Components/SocialButton';
+import {AuthContext} from '../Navigations/AuthProvider';
 const Signup = () => {
+  const {Register} = useContext(AuthContext);
   const [Email, setEmail] = useState();
   // const [Email, setEmail] = useState();
   const [Password, setPassword] = useState();
@@ -72,7 +74,7 @@ const Signup = () => {
           <View>
             <FormsButton
               buttonTitle={'Sign up'}
-              onPress={() => alert('fbvhb')}
+              onPress={() => Register(Email, Password)}
             />
           </View>
           <View style={{height: 30}} />

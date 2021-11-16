@@ -31,7 +31,7 @@ function RouteScreen() {
   // }
   return (
     <NavigationContainer>
-      {user ? <AppStack /> : <AppStack />}
+      {user ? alert('your sign in') : <AppStack />}
     </NavigationContainer>
   );
 }

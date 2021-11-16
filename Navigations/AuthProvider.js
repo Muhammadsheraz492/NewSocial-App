@@ -1,5 +1,5 @@
 import React, {createContext, useState} from 'react';
-import {auth} from '@react-native-firebase/auth';
+import auth from '@react-native-firebase/auth';
 
 export const AuthContext = createContext();
 
@@ -18,6 +18,7 @@ export const AuthProvider = ({children}) => {
           }
         },
         Register: async (email, password) => {
+          console.log(email);
           try {
             await auth().createUserWithEmailAndPassword(email, password);
           } catch (e) {
