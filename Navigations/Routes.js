@@ -6,8 +6,9 @@ import firestore from '@react-native-firebase/firestore';
 
 import {NavigationContainer} from '@react-navigation/native';
 import auth from '@react-native-firebase/auth';
-import AppStack from './AuthStack';
-
+// import AppStack from './AuthStack';
+import AppStack from './AppStack';
+import AuthStack from './AuthStack';
 function RouteScreen() {
   const [initializing, setInitializing] = useState(true);
   const [user, setUser] = useState();
@@ -15,26 +16,30 @@ function RouteScreen() {
     setUser(user);
     if (initializing) setInitializing(false);
   }
-  const data = async () => {
-    firestore().collection('users').doc('wezXL6bvUelwWbkShqpF').delete();
-    // .update({
-    //   passwd: 'new paaswd',
-    // })
-    // .then(e => console.log('Updated'));
-    // const usersCollection = await firestore().collection('users').get();
-    // // .doc('wezXL6bvUelwWbkShqpF')
-    // // .get();
-    // // console.log(usersCollection.docs);
-    // usersCollection.forEach(element => {
-    //   console.log(element.data());
-    // });
-  };
+  // const data = async () => {
+  // firestore().collection('users').doc('NzR7Qwu1OpddwjcUF8NF').delete();
+  // .update({
+  //   passwd: 'new paaswd',
+  // })
+  // .then(e => console.log('Updated'));
+  // const usersCollection = await firestore().collection('sheraz').get();
+  // .doc('wezXL6bvUelwWbkShqpF')
+  // .get();
+  // console.log(usersCollection.docs);
+  //   usersCollection.forEach(element => {
+  //     console.log(element.data());
+  //   });
+  // };
+  function onAuthStateChanged(user) {
+    setUser(user);
+    if (initializing) setInitializing(false);
+  }
 
   useEffect(() => {
-    // const subscriber = auth().onAuthStateChanged(onAuthStateChanged);
-    // return subscriber; // unsubscribe on unmount
+    const subscriber = auth().onAuthStateChanged(onAuthStateChanged);
+    return subscriber; // unsubscribe on unmount
 
-    data();
+    // data();
   }, []);
 
   if (initializing) return null;
@@ -49,7 +54,7 @@ function RouteScreen() {
   // }
   return (
     <NavigationContainer>
-      {user ? alert('your sign in') : <AuthStack />}
+      {user ? <AppStack /> : <AuthStack />}
     </NavigationContainer>
   );
 }

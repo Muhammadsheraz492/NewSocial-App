@@ -25,6 +25,13 @@ export const AuthProvider = ({children}) => {
             console.log(e);
           }
         },
+        Logout: async () => {
+          try {
+            await auth().signOut();
+          } catch (e) {
+            console.log(e);
+          }
+        },
       }}>
       {children}
     </AuthContext.Provider>
