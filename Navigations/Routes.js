@@ -6,7 +6,7 @@ import firestore from '@react-native-firebase/firestore';
 
 import {NavigationContainer} from '@react-navigation/native';
 import auth from '@react-native-firebase/auth';
-import AppStack from './AppStack';
+import AppStack from './AuthStack';
 
 function RouteScreen() {
   const [initializing, setInitializing] = useState(true);
@@ -49,7 +49,7 @@ function RouteScreen() {
   // }
   return (
     <NavigationContainer>
-      {user ? alert('your sign in') : <AppStack />}
+      {user ? alert('your sign in') : <AuthStack />}
     </NavigationContainer>
   );
 }
