@@ -25,7 +25,7 @@ const AppStack = () => {
     });
     GoogleSignin.configure({
       webClientId:
-        '431454781284-ia0u4c9iptgie4gavp0jf971vk0c4k9r.apps.googleusercontent.com',
+        '1014234649355-n3kqfk092vro5o0hnl04p53hq8ppu9hg.apps.googleusercontent.com',
     });
   }, []);
   if (isFirstlunch == null) {

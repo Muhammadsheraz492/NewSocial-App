@@ -1,20 +1,21 @@
 {
   "project_info": {
-    "project_number": "431454781284",
-    "project_id": "socialapp-e18f2",
-    "storage_bucket": "socialapp-e18f2.appspot.com"
+    "project_number": "1014234649355",
+    "firebase_url": "https://social-b2f16-default-rtdb.firebaseio.com",
+    "project_id": "social-b2f16",
+    "storage_bucket": "social-b2f16.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:431454781284:android:8e7caa99935c8c17520471",
+        "mobilesdk_app_id": "1:1014234649355:android:8de4d9acad207f311b080e",
         "android_client_info": {
           "package_name": "com.social"
         }
       },
       "oauth_client": [
         {
-          "client_id": "431454781284-rcgdq47a4f95oc9q9maf815mt8uhkscn.apps.googleusercontent.com",
+          "client_id": "1014234649355-p3q4vbhjv5sm2tjnpbteuj3o7auho8dk.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.social",
@@ -22,20 +23,20 @@
           }
         },
         {
-          "client_id": "431454781284-ia0u4c9iptgie4gavp0jf971vk0c4k9r.apps.googleusercontent.com",
+          "client_id": "1014234649355-n3kqfk092vro5o0hnl04p53hq8ppu9hg.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBHbV877JikJ3tnx167MWcxIBN4jGK_W7g"
+          "current_key": "AIzaSyAnV2LLmoVQP4Le8klqiDbukA_Y_TdEoX8"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "431454781284-ia0u4c9iptgie4gavp0jf971vk0c4k9r.apps.googleusercontent.com",
+              "client_id": "1014234649355-n3kqfk092vro5o0hnl04p53hq8ppu9hg.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
