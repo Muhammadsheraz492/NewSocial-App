@@ -1,12 +1,10 @@
-import React from 'react';
-import {View, Text} from 'react-native';
+// In App.js in a new project
 
-const App = () => {
-  return (
-    <View>
-      <Text>Welcome to react native App</Text>
-    </View>
-  );
-};
+import * as React from 'react';
+
+import Provider from './Navigations/Provider';
+function App() {
+  return <Provider />;
+}
 
 export default App;
