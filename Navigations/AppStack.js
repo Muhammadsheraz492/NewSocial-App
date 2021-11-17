@@ -4,7 +4,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import OnboardingScreen from '../Screens/Onboarding';
 import Login from '../Screens/Login';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
-
+import {GoogleSignin} from '@react-native-google-signin/google-signin';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Startuplogo from '../Screens/Startuplogo';
 import Signup from '../Screens/Sign up';
@@ -22,6 +22,10 @@ const AppStack = () => {
       } else {
         setIsFirstlunch(false);
       }
+    });
+    GoogleSignin.configure({
+      webClientId:
+        '431454781284-ia0u4c9iptgie4gavp0jf971vk0c4k9r.apps.googleusercontent.com',
     });
   }, []);
   if (isFirstlunch == null) {
