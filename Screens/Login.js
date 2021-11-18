@@ -9,7 +9,7 @@ import FormsInput from '../Components/FormsInput';
 import SocialButton from '../Components/SocialButton';
 import {AuthContext} from '../Navigations/AuthProvider';
 const Login = ({navigation}) => {
-  const {login, GoogleLogin} = useContext(AuthContext);
+  const {login, GoogleLogin, fbLogin} = useContext(AuthContext);
   const [Email, setEmail] = useState();
   // const [Email, setEmail] = useState();
   const [Password, setPassword] = useState();
@@ -72,6 +72,7 @@ const Login = ({navigation}) => {
             buttonTitle=" Sign in with FaceBook"
             color={'#4867aa'}
             backgroundColor={'#e6eaf4'}
+            onPress={() => fbLogin()}
           />
         </View>
         <View style={{height: 20}} />
