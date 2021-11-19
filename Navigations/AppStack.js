@@ -8,7 +8,7 @@ import {GoogleSignin} from '@react-native-google-signin/google-signin';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Startuplogo from '../Screens/Startuplogo';
 import Signup from '../Screens/Sign up';
-
+import Splash from '../Screens/Splash';
 import {View} from 'react-native-animatable';
 const Stack = createNativeStackNavigator();
 const AppStack = () => {
@@ -33,19 +33,19 @@ const AppStack = () => {
   } else if (isFirstlunch == true) {
     RouteScreen = 'OnboardingScreen';
   } else {
-    RouteScreen = 'Login';
+    RouteScreen = 'Splash';
   }
 
   return (
     <Stack.Navigator initialRouteName={RouteScreen}>
       <Stack.Screen
-        name="Startuplogo"
-        component={Startuplogo}
+        name="OnboardingScreen"
+        component={OnboardingScreen}
         options={{headerShown: false}}
       />
       <Stack.Screen
-        name="OnboardingScreen"
-        component={OnboardingScreen}
+        name="Splash"
+        component={Splash}
         options={{headerShown: false}}
       />
       <Stack.Screen

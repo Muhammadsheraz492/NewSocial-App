@@ -6,7 +6,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {AuthProvider} from './AuthProvider';
 import AppStack from './AppStack';
 import RouteScreen from './Routes';
-function Provider() {
+function Providr() {
   return (
     <AuthProvider>
       <RouteScreen />
@@ -14,4 +14,4 @@ function Provider() {
   );
 }
 
-export default Provider;
+export default Providr;

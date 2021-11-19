@@ -9,7 +9,7 @@ import FormsInput from '../Components/FormsInput';
 import SocialButton from '../Components/SocialButton';
 import {AuthContext} from '../Navigations/AuthProvider';
 const Login = ({navigation}) => {
-  const {login, GoogleLogin} = useContext(AuthContext);
+  const {login, GoogleLogin, fbLogin} = useContext(AuthContext);
   const [Email, setEmail] = useState();
   // const [Email, setEmail] = useState();
   const [Password, setPassword] = useState();
@@ -32,10 +32,11 @@ const Login = ({navigation}) => {
         <View style={{alignItems: 'center', justifyContent: 'center', flex: 1}}>
           <Animatable.Image
             animation={'zoomInUp'}
-            style={{width: 200, height: 200}}
-            source={require('../assets/rn-social-logo.png')}
+            style={{width: 250, height: 220}}
+            source={require('../assets/Image/Onbarding1.png')}
           />
         </View>
+        <View style={{height: 10}} />
         <View style={{}}>
           <FormsInput
             placeholderText="Enter Email"
@@ -72,6 +73,7 @@ const Login = ({navigation}) => {
             buttonTitle=" Sign in with FaceBook"
             color={'#4867aa'}
             backgroundColor={'#e6eaf4'}
+            onPress={() => fbLogin()}
           />
         </View>
         <View style={{height: 20}} />

@@ -5,7 +5,8 @@ import {View, Text} from 'react-native-animatable';
 import {NavigationContainer} from '@react-navigation/native';
 import auth from '@react-native-firebase/auth';
 import AppStack from './AppStack';
-import Logout from '../Screens/Logout';
+
+import Drawer from './drawer';
 function RouteScreen() {
   const [initializing, setInitializing] = useState(true);
   const [user, setUser] = useState();
@@ -31,7 +32,7 @@ function RouteScreen() {
   // }
   return (
     <NavigationContainer>
-      {user ? <Logout /> : <AppStack />}
+      {user ? <Drawer /> : <AppStack />}
     </NavigationContainer>
   );
 }
