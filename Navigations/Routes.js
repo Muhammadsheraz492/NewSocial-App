@@ -8,7 +8,12 @@ import {NavigationContainer} from '@react-navigation/native';
 import auth from '@react-native-firebase/auth';
 // import AppStack from './AuthStack';
 import AppStack from './AppStack';
+<<<<<<< HEAD
 import AuthStack from './AuthStack';
+=======
+
+import Drawer from './drawer';
+>>>>>>> master
 function RouteScreen() {
   const [initializing, setInitializing] = useState(true);
   const [user, setUser] = useState();
@@ -54,7 +59,11 @@ function RouteScreen() {
   // }
   return (
     <NavigationContainer>
+<<<<<<< HEAD
       {user ? <AppStack /> : <AuthStack />}
+=======
+      {user ? <Drawer /> : <AppStack />}
+>>>>>>> master
     </NavigationContainer>
   );
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {useContext} from 'react';
 import {View, Text, Pressable} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
@@ -15,6 +16,15 @@ const Home = () => {
       <Pressable onPress={() => Logout()}>
         <Text>Log Out</Text>
       </Pressable>
+=======
+import React from 'react';
+import {View, Text} from 'react-native';
+
+const Home = () => {
+  return (
+    <View>
+      <Text>jfdvbhjdfbvh</Text>
+>>>>>>> master
     </View>
   );
 };

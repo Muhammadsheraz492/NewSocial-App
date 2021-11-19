@@ -9,7 +9,7 @@ import FormsInput from '../Components/FormsInput';
 import SocialButton from '../Components/SocialButton';
 import {AuthContext} from '../Navigations/AuthProvider';
 const Signup = () => {
-  const {Register} = useContext(AuthContext);
+  const {Register, GoogleLogin} = useContext(AuthContext);
   const [Email, setEmail] = useState();
   // const [Email, setEmail] = useState();
   const [Password, setPassword] = useState();
@@ -107,6 +107,7 @@ const Signup = () => {
               buttonTitle="Sign up with Google"
               color={'#de4d41'}
               backgroundColor="#f5e7ea"
+              onPress={() => GoogleLogin()}
             />
           </View>
           <View style={{height: 20}} />
