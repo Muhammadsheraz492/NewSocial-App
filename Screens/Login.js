@@ -32,10 +32,11 @@ const Login = ({navigation}) => {
         <View style={{alignItems: 'center', justifyContent: 'center', flex: 1}}>
           <Animatable.Image
             animation={'zoomInUp'}
-            style={{width: 200, height: 200}}
-            source={require('../assets/rn-social-logo.png')}
+            style={{width: 250, height: 220}}
+            source={require('../assets/Image/Onbarding1.png')}
           />
         </View>
+        <View style={{height: 10}} />
         <View style={{}}>
           <FormsInput
             placeholderText="Enter Email"
