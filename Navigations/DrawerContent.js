@@ -18,7 +18,7 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import {Switch} from 'react-native-gesture-handler';
 import {useContext} from 'react';
-
+import {useSelector} from 'react-redux';
 import {AuthContext} from './AuthProvider';
 const DrawerContent = props => {
   const [isDark, setDark] = useState(false);
@@ -26,6 +26,7 @@ const DrawerContent = props => {
     setDark(!isDark);
   };
   const {Logout} = useContext(AuthContext);
+  const image = useSelector(state => state.counter.image);
   return (
     <View style={{flex: 1}}>
       <DrawerContentScrollView {...props}>
@@ -34,7 +35,7 @@ const DrawerContent = props => {
             <View style={{flexDirection: 'row', top: '5%'}}>
               <Avatar.Image
                 source={{
-                  uri: 'https://scontent.flhe2-1.fna.fbcdn.net/v/t1.6435-9/119168178_790408478417016_779506481472359204_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=174925&_nc_eui2=AeGecmVNNce5I7ytGw5mVV80nqNy0tpeLrOeo3LS2l4us_fFVWa76928iVs32bG15jU4UcUXCY7xjHLIGLOAOmjS&_nc_ohc=7iPUHaYgk0kAX9aC8SS&_nc_ht=scontent.flhe2-1.fna&oh=eb5a2cc0e41c2576be90c32fda9d8556&oe=6189D263',
+                  uri: image,
                 }}
                 // size={50}
               />

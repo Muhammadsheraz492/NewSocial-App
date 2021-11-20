@@ -6,6 +6,7 @@ export const counterSlice = createSlice({
     value: 0,
     backgroundColor: '#fff',
     textColor: 'black',
+    image: '',
   },
   reducers: {
     changeBackgroundColor: (state, action) => {
@@ -14,10 +15,14 @@ export const counterSlice = createSlice({
     ChangeTextColor: (state, action) => {
       state.textColor = action.payload;
     },
+    ImagefromFont: (state, action) => {
+      state.image = action.payload;
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const {ChangeTextColor, changeBackgroundColor} = counterSlice.actions;
+export const {ChangeTextColor, changeBackgroundColor, ImagefromFont} =
+  counterSlice.actions;
 
 export default counterSlice.reducer;

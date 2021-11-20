@@ -10,6 +10,7 @@ import DrawerContent from './DrawerContent';
 import Home from '../Screens/Home';
 const Tab = createDrawerNavigator();
 const HomeStack = createNativeStackNavigator();
+import {useSelector} from 'react-redux';
 const HomeStackScreen = ({navigation}) => {
   return (
     <HomeStack.Navigator>
