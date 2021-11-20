@@ -17,12 +17,15 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import {Switch} from 'react-native-gesture-handler';
+import {useContext} from 'react';
 
+import {AuthContext} from './AuthProvider';
 const DrawerContent = props => {
   const [isDark, setDark] = useState(false);
   const togoogel = () => {
     setDark(!isDark);
   };
+  const {Logout} = useContext(AuthContext);
   return (
     <View style={{flex: 1}}>
       <DrawerContentScrollView {...props}>
@@ -142,7 +145,7 @@ const DrawerContent = props => {
             <Octicons name="sign-out" size={24} color={color} />
           )}
           label="Sign Out"
-          onPress={() => alert('This is Sign Out Button')}
+          onPress={() => Logout()}
         />
       </Drawer.Section>
     </View>
