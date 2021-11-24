@@ -53,6 +53,11 @@ const Drawer = () => {
         component={HomeStackScreen}
         options={{headerShown: false}}
       />
+      <Tab.Screen
+        name="HomeScreen"
+        component={HomeStackScreen}
+        // options={{headerShown: false}}
+      />
       {/* <Tab.Screen name="About" component={About} /> */}
     </Tab.Navigator>
   );

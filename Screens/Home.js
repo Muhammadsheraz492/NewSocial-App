@@ -92,7 +92,7 @@ const Home = () => {
   };
   return (
     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <TouchableOpacity onPress={() => TAkePHotoFromFront()}>
+      <TouchableOpacity onPress={() => Mutlimap()}>
         <View>
           <Text>Pick IMage From openCamera</Text>
         </View>
